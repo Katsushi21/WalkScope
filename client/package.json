@@ -16,6 +16,7 @@
 		"@smui/button": "^7.0.0-beta.2",
 		"@smui/fab": "^7.0.0-beta.2",
 		"@smui/icon-button": "^7.0.0-beta.2",
+		"@smui/textfield": "^7.0.0-beta.3",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.5.0",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
