@@ -1,0 +1,15 @@
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: ./Dockerfile
+    container_name: ws-client
+    hostname: client.walkscope.com
+    ports:
+      - '5173:5173'
+    volumes:
+      - .client:/client
+      - ./static:/client/static
+      - ./vite.config.js:/client/vite.config.js
+      - ./tsconfig.json:/client/tsconfig.json
+      - ./svelte.config.js:/client/svelte.config.js

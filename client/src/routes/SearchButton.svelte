@@ -1,6 +1,5 @@
 <script lang="ts">
 	import IconButton from '@smui/icon-button';
-
 	let clicked = 0;
 </script>
 

@@ -17,11 +17,6 @@
 </script>
 
 <div class="margins">
-	<!--
-    Note: when you bind to `invalid`, but you only want to
-    monitor it instead of updating it yourself, you also
-    should include `updateInvalid`.
-  -->
 	<Textfield
 		type="email"
 		bind:dirty
@@ -35,10 +30,6 @@
 		on:blur={() => (focused = false)}
 		withTrailingIcon={!disabled}
 	>
-		<!--
-      Since this icon is conditional, it needs to be wrapped
-      in a fragment, and we need to provide withTrailingIcon.
-    -->
 		<svelte:fragment slot="trailingIcon">
 			{#if !disabled}
 				<Icon class="material-icons" role="button" on:click={clickHandler}>send</Icon>
