@@ -6,10 +6,10 @@ services:
     container_name: ws-client
     hostname: client.walkscope.com
     ports:
-      - '5173:5173'
+      - "5173:5173"
     volumes:
-      - .client:/client
-      - ./static:/client/static
-      - ./vite.config.js:/client/vite.config.js
-      - ./tsconfig.json:/client/tsconfig.json
-      - ./svelte.config.js:/client/svelte.config.js
+      - ./client:/app
+      - ./client/static:/app/static
+      - ./client/vite.config.js:/app/vite.config.js
+      - ./client/tsconfig.json:/app/tsconfig.json
+      - ./client/svelte.config.js:/app/svelte.config.js
