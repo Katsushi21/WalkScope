@@ -1,11 +1,13 @@
-<ul class="py-4">
-	<li class="mb-2">
-		<a href="#" class="block p-2 text-gray-800 hover:bg-gray-200 rounded"> メニュー項目 1 </a>
-	</li>
-	<li class="mb-2">
-		<a href="#" class="block p-2 text-gray-800 hover:bg-gray-200 rounded"> メニュー項目 2 </a>
-	</li>
-	<li class="mb-2">
-		<a href="#" class="block p-2 text-gray-800 hover:bg-gray-200 rounded"> メニュー項目 3 </a>
-	</li>
-</ul>
+<script>
+	import ConditionList from './ConditionList.svelte';
+	import Setting from './Setting.svelte';
+</script>
+
+<div class=" bg-gray-500">
+	<div class="h-9/10">
+		<ConditionList />
+	</div>
+	<div class="h-1/10">
+		<Setting />
+	</div>
+</div>

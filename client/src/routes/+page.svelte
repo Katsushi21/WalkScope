@@ -8,10 +8,10 @@
 </svelte:head>
 
 <div class="flex">
-	<div id="sidemenu" class="w-1/4">
+	<div class="w-1/5">
 		<SideMenu />
 	</div>
-	<div id="map" class="w-3/4">
+	<div class="w-4/5">
 		<Map />
 	</div>
 </div>
