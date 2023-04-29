@@ -1,0 +1,7 @@
+*.md
+.*ignore
+.eslint*
+.prettier*
+Dockerfile
+node_modules
+yarn.lock
