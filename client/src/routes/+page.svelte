@@ -1,6 +1,6 @@
 <script>
-	import SideMenu from './SideMenu.svelte';
-	import Map from './Map.svelte';
+	import SideMenu from './components/SideMenu.svelte';
+	import Map from './components/Map.svelte';
 </script>
 
 <svelte:head>

@@ -1,13 +1,7 @@
 <script lang="ts">
+  import type { Conditions } from '../../../$types';
 	import Condition from './Condition.svelte';
 
-	type Condition = {
-		condition: string[];
-	};
-	type Conditions = {
-		city: string;
-		conditions: Condition[];
-	};
 	let conditions: Conditions = [];
 </script>
 
