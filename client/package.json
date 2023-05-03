@@ -16,6 +16,7 @@
 		"smui-theme-dark": "smui-theme compile static/smui-dark.css -i src/theme/dark"
 	},
 	"devDependencies": {
+		"@smui/icon-button": "^6.1.4",
 		"@smui/textfield": "^6.1.4",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/adapter-node": "^1.2.3",

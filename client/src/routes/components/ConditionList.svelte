@@ -7,15 +7,16 @@
 		condition: string[];
 	};
 
-	let conditions: Conditions = { city: '', condition: ['string'] };
+	let conditions: Conditions = { city: '', condition: ['0', '1', '2'] };
 
-	const deleteCondition = (e: CustomEvent<number>): void => {
-		conditions.condition = conditions.condition.slice(e.detail);
+	const deleteCondition = (index: number): void => {
+		conditions.condition.splice(index, 1);
+		conditions = conditions;
 	};
 </script>
 
 <CityCondition city={conditions.city} />
 
 {#each conditions.condition as value, index}
-	<Condition {index} {value} on:deleteCondition{deleteCondition} />
+	<Condition {index} {value} on:deleteCondition={() => deleteCondition(index)} />
 {/each}
