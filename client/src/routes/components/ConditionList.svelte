@@ -1,10 +1,21 @@
 <script lang="ts">
-  import type { Conditions } from '../../../$types';
+	import CityCondition from './CityCondition.svelte';
 	import Condition from './Condition.svelte';
 
-	let conditions: Conditions = [];
+	type Conditions = {
+		city: string;
+		condition: string[];
+	};
+
+	let conditions: Conditions = { city: '', condition: ['string'] };
+
+	const deleteCondition = (e: CustomEvent<number>): void => {
+		conditions.condition = conditions.condition.slice(e.detail);
+	};
 </script>
 
-{#each conditions as condition}
-	<Condition {condition.city} {condition.Condition} />
+<CityCondition city={conditions.city} />
+
+{#each conditions.condition as value, index}
+	<Condition {index} {value} on:deleteCondition{deleteCondition} />
 {/each}
