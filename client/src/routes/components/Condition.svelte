@@ -11,8 +11,8 @@
 	}
 </script>
 
-<div class="flex">
-	<input bind:value type="text" class="input w-3/4 max-w-xs" />
+<div class="flex w-full">
+	<input bind:value type="text" class="input" />
 	<button class="btn btn-circle btn-outline" on:click={() => deleteCondition(index)}>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
