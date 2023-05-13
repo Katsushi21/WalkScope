@@ -5,9 +5,10 @@
 	type Conditions = {
 		city: string;
 		condition: string[];
+		scope: number;
 	};
 
-	let conditions: Conditions = { city: '', condition: ['0', '1', '2'] };
+	let conditions: Conditions = { city: '', condition: ['0', '1', '2'], scope: 100 };
 
 	const deleteCondition = (index: number): void => {
 		conditions.condition.splice(index, 1);
