@@ -1,7 +1,10 @@
-<script>
+<script lang="ts">
 	import Map from './components/Map.svelte';
 	import ConditionList from './components/ConditionList.svelte';
 	import Setting from './components/Setting.svelte';
+	import type { PageData } from './$types';
+	export let data: PageData;
+	console.log(data.cityList);
 </script>
 
 <svelte:head>

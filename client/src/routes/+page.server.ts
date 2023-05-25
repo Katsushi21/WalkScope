@@ -1,5 +1,6 @@
 import type { PageServerLoad } from './$types';
 import { cityListMock } from './cityListMock';
+import { OFFICIAL_PREFECTURE_API } from '$env/static/private';
 
 export type CityList = { [K in string]: string[] };
 type CityApiResponse = {
@@ -8,7 +9,9 @@ type CityApiResponse = {
 };
 
 export const load = (async () => {
-	let cityList: CityList = {};
+	const cityList: CityList = cityListMock;
+	if (OFFICIAL_PREFECTURE_API !== 'true') return cityList;
+
 	for (let num = 1; num <= 47; num++) {
 		const numString = String(num);
 		const code = numString.length === 1 ? '0' + numString : numString;
@@ -21,10 +24,7 @@ export const load = (async () => {
 				return d.name;
 			});
 			cityList[code] = cities;
-		} else {
-			cityList[code] = cityListMock[code];
 		}
 	}
-
 	return cityList;
 }) satisfies PageServerLoad;
