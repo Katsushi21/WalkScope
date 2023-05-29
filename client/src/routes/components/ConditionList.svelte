@@ -1,5 +1,4 @@
 <script lang="ts">
-	import CityCondition from './CityCondition.svelte';
 	import ScopeCondition from './ScopeCondition.svelte';
 	import Condition from './Condition.svelte';
 	import AddConditionButton from './AddConditionButton.svelte';
@@ -22,7 +21,6 @@
 	};
 </script>
 
-<CityCondition city={conditions.city} />
 <ScopeCondition scope={conditions.scope} />
 {#each conditions.condition as value, index}
 	<Condition {index} {value} on:deleteCondition={() => deleteCondition(index)} />
