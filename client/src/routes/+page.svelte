@@ -4,7 +4,7 @@
 	import ConditionList from './components/ConditionList.svelte';
 	import Setting from './components/Setting.svelte';
 	import type { PageData } from './$types';
-	export let cityList: PageData;
+	export let data: PageData;
 </script>
 
 <svelte:head>
@@ -20,7 +20,7 @@
 	<div class="drawer-side">
 		<label for="my-drawer-2" class="drawer-overlay" />
 		<ul class="menu p-4 w-80 bg-base-100 text-base-content">
-			<CityCondition {cityList} />
+			<CityCondition cityList={data.props.cityList} />
 			<ConditionList />
 			<li class="divider" />
 			<Setting />

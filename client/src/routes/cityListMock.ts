@@ -1,4 +1,4 @@
-import type { CityList } from './+page.server';
+import type { CityList } from '$lib/types';
 
 export const cityListMock: CityList = {
 	10: [

@@ -2,12 +2,7 @@
 	import ScopeCondition from './ScopeCondition.svelte';
 	import Condition from './Condition.svelte';
 	import AddConditionButton from './AddConditionButton.svelte';
-
-	type Conditions = {
-		city: string;
-		condition: string[];
-		scope: number;
-	};
+	import type { Conditions } from '$lib/types';
 
 	let conditions: Conditions = { city: 'yokohama', condition: ['0', '1', '2'], scope: 100 };
 

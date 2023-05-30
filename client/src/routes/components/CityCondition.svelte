@@ -1,21 +1,26 @@
 <script lang="ts">
-	import type { CityList } from '../+page.server';
+	import type { CityList } from '$lib/types';
 	export let cityList: CityList;
 
-	let code: number = 0;
+	let code: string = '00';
 </script>
 
-<select name="prefecture" bind:value={code} on:change={() => ()}>
-	<option disabled selected value="0">都道府県</option>
-	<option value="1">北海道</option>
-	<option value="2">青森県</option>
-	<option value="3">岩手県</option>
-	<option value="4">宮城県</option>
-	<option value="5">秋田県</option>
-	<option value="6">山形県</option>
-	<option value="7">福島県</option>
-	<option value="8">茨城県</option>
-	<option value="9">栃木県</option>
+<select
+	class="select select-primary w-full max-w-xs"
+	name="prefecture"
+	bind:value={code}
+	on:change={(code) => (code = code)}
+>
+	<option disabled selected value="00">都道府県</option>
+	<option value="01">北海道</option>
+	<option value="02">青森県</option>
+	<option value="03">岩手県</option>
+	<option value="04">宮城県</option>
+	<option value="05">秋田県</option>
+	<option value="06">山形県</option>
+	<option value="07">福島県</option>
+	<option value="08">茨城県</option>
+	<option value="09">栃木県</option>
 	<option value="10">群馬県</option>
 	<option value="11">埼玉県</option>
 	<option value="12">千葉県</option>
@@ -56,4 +61,12 @@
 	<option value="47">沖縄県</option>
 </select>
 
-<select class="select select-primary w-full max-w-xs" />
+<select class="select select-primary w-full max-w-xs">
+	{#if code === '00'}
+		<option>都道府県を選択してください</option>
+	{:else}
+		{#each cityList[code] as key}
+			<option value={key}>{key}</option>
+		{/each}
+	{/if}
+</select>
