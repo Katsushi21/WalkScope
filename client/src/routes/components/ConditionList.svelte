@@ -1,5 +1,4 @@
 <script lang="ts">
-	import ScopeCondition from './ScopeCondition.svelte';
 	import Condition from './Condition.svelte';
 	import AddConditionButton from './AddConditionButton.svelte';
 	import type { Conditions } from '$lib/types';
@@ -16,7 +15,6 @@
 	};
 </script>
 
-<ScopeCondition scope={conditions.scope} />
 {#each conditions.condition as value, index}
 	<Condition {index} {value} on:deleteCondition={() => deleteCondition(index)} />
 {/each}

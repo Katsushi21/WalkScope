@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Map from './components/Map.svelte';
 	import CityCondition from './components/CityCondition.svelte';
+	import RadiusCondition from './components/RadiusCondition.svelte';
 	import ConditionList from './components/ConditionList.svelte';
 	import Setting from './components/Setting.svelte';
 	import type { PageData } from './$types';
@@ -8,10 +9,10 @@
 </script>
 
 <svelte:head>
-	<title>Walk Scope</title>
+	<title>Walk Radius</title>
 </svelte:head>
 
-<div class="drawer drawer-mobile">
+<div class="drawer lg:drawer-open">
 	<input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
 	<div class="drawer-content flex flex-col items-center justify-center">
 		<Map />
@@ -36,8 +37,9 @@
 	</div>
 	<div class="drawer-side">
 		<label for="my-drawer-2" class="drawer-overlay" />
-		<ul class="menu p-4 w-80 bg-base-100 text-base-content">
+		<ul class="menu p-4 w-80 h-full bg-base-100 text-base-content">
 			<CityCondition cityList={data.props.cityList} />
+			<RadiusCondition />
 			<ConditionList />
 			<li class="divider" />
 			<Setting />
