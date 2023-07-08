@@ -4,6 +4,7 @@
 	import RadiusCondition from './components/RadiusCondition.svelte';
 	import ConditionList from './components/ConditionList.svelte';
 	import Setting from './components/Setting.svelte';
+	import SearchButton from './components/SearchButton.svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
 </script>
@@ -41,6 +42,7 @@
 			<CityCondition cityList={data.props.cityList} />
 			<RadiusCondition />
 			<ConditionList />
+			<SearchButton />
 			<li class="divider" />
 			<Setting />
 		</ul>

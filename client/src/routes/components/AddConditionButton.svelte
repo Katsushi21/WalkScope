@@ -5,7 +5,7 @@
 	const addCondition = () => dispatch('addCondition');
 </script>
 
-<button class="btn btn-circle btn-outline" on:click={addCondition}>
+<button class="btn btn-circle btn-outline mb-2" on:click={addCondition}>
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		fill="none"
