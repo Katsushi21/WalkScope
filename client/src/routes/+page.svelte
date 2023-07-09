@@ -39,10 +39,12 @@
 	<div class="drawer-side">
 		<label for="my-drawer-2" class="drawer-overlay" />
 		<ul class="menu p-4 w-80 h-full bg-base-100 text-base-content">
-			<CityCondition cityList={data.props.cityList} />
-			<RadiusCondition />
-			<ConditionList />
-			<SearchButton />
+			<form action="POST">
+				<CityCondition cityList={data.props.cityList} />
+				<RadiusCondition />
+				<ConditionList />
+				<SearchButton />
+			</form>
 			<li class="divider" />
 			<Setting />
 		</ul>

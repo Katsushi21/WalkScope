@@ -1,4 +1,4 @@
-import type { PageServerLoad } from './$types';
+import type { PageServerLoad, Actions } from './$types';
 import { cityListMock } from './cityListMock';
 import { OFFICIAL_PREFECTURE_API } from '$env/static/private';
 import type { CityList, CityApiResponse } from '$lib/types';
@@ -23,3 +23,16 @@ export const load = (async () => {
 	}
 	return { props: { cityList } };
 }) satisfies PageServerLoad;
+
+export const actions = {
+	search: async ({ cookies, request }) => {
+		const data = await request.formData();
+		const email = data.get('email');
+		const password = data.get('password');
+
+		const user = await db.getUser(email);
+		cookies.set('sessionid', await db.createSession(user));
+
+		return { success: true };
+	}
+} satisfies Actions;

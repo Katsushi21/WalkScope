@@ -1,4 +1,4 @@
-<button class="btn btn-primary">
+<button class="btn btn-primary m-1 w-full gap-2">
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		fill="none"
