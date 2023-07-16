@@ -1,10 +1,6 @@
 <script lang="ts">
 	import Map from './components/Map.svelte';
-	import CityCondition from './components/CityCondition.svelte';
-	import RadiusCondition from './components/RadiusCondition.svelte';
-	import ConditionList from './components/ConditionList.svelte';
-	import Setting from './components/Setting.svelte';
-	import SearchButton from './components/SearchButton.svelte';
+	import SideMenu from './components/SideMenu.svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
 </script>
@@ -37,16 +33,6 @@
 		</label>
 	</div>
 	<div class="drawer-side">
-		<label for="my-drawer-2" class="drawer-overlay" />
-		<ul class="menu p-4 w-80 h-full bg-base-100 text-base-content">
-			<form method="POST" action="/search">
-				<CityCondition cityList={data.props.cityList} />
-				<RadiusCondition />
-				<ConditionList />
-				<SearchButton />
-			</form>
-			<li class="divider" />
-			<Setting />
-		</ul>
+		<SideMenu />
 	</div>
 </div>

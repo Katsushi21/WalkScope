@@ -24,15 +24,15 @@ export const load = (async () => {
 	return { props: { cityList } };
 }) satisfies PageServerLoad;
 
-export const actions = {
-	search: async ({ cookies, request }) => {
-		const data = await request.formData();
-		const email = data.get('email');
-		const password = data.get('password');
+// export const actions = {
+// 	search: async ({ cookies, request }) => {
+// 		const data = await request.formData();
+// 		const email = data.get('email');
+// 		const password = data.get('password');
 
-		const user = await db.getUser(email);
-		cookies.set('sessionid', await db.createSession(user));
+// 		const user = await db.getUser(email);
+// 		cookies.set('sessionid', await db.createSession(user));
 
-		return { success: true };
-	}
-} satisfies Actions;
+// 		return { success: true };
+// 	}
+// } satisfies Actions;
