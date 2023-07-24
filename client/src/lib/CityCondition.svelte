@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { CityList } from '$lib/types';
-	export let cityList: CityList;
+	import { getStores, navigating, page, updated } from '$app/stores';
+	console.log(page);
+	let cityList: CityList = page.props;
 
 	let code: string = '00';
 </script>
