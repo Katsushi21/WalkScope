@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Map from './components/Map.svelte';
-	import SideMenu from './components/SideMenu.svelte';
+	import Map from '$lib/ui/Map.svelte';
+	import SideMenu from '$lib/ui/SideMenu.svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
 </script>
