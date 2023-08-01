@@ -8,3 +8,4 @@ export type Conditions = {
 	condition: string[];
 	scope: number;
 };
+export type Fetch = (input: RequestInfo | URL, init?: RequestInit) => Promise<Response>;

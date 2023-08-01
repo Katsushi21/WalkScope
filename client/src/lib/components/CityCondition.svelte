@@ -1,10 +1,5 @@
 <script lang="ts">
 	import type { CityList } from '$lib/types';
-	import type { PageData } from '$types';
-
-	export let data: PageData;
-	console.log(data);
-	let cityList: CityList = page.props;
 
 	let code: string = '00';
 </script>
