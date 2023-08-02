@@ -2,7 +2,11 @@
 	import Map from '$lib/components/Map.svelte';
 	import SideMenu from '$lib/components/SideMenu.svelte';
 	import type { PageData } from './$types';
+	import { setCities } from '$lib/stores/cities';
 	export let data: PageData;
+
+	setCities(data.props.cityList);
+	console.log(data);
 </script>
 
 <svelte:head>
