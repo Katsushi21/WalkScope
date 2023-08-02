@@ -5,8 +5,8 @@
 	import { setCities } from '$lib/stores/cities';
 	export let data: PageData;
 
-	setCities(data.props.cityList);
-	console.log(data);
+	const cityList = data.props.cityList;
+	Object.keys(cityList).length && setCities(data.props.cityList);
 </script>
 
 <svelte:head>

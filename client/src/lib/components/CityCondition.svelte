@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { CityList } from '$lib/types';
+	import { cities } from '$lib/stores/cities';
 
 	let code: string = '00';
 </script>
@@ -64,7 +64,7 @@
 	{#if code === '00'}
 		<option>都道府県を選択してください</option>
 	{:else}
-		{#each cityList[code] as key}
+		{#each $cities[code] as key}
 			<option value={key}>{key}</option>
 		{/each}
 	{/if}
